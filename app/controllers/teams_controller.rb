@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
 
-    before_action :require_login, only: [:show]
+    before_action :authenticate_user!, only: [:show]
 
     def new
         @team = Team.new
@@ -8,6 +8,10 @@ class TeamsController < ApplicationController
 
     def create
         @team = Team.create(team_params)
+    end
+
+    def show
+        @team = current_user.team
     end
 
     private
