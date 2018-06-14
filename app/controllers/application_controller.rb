@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
 
   def current_team
     current_user.team
-end
+  end
+
+  def verify_team
+    User.find(params[:id]).team == current_team
+  end
 
  # def require_login
   #  redirect_to root_path unless session[:user_id]
