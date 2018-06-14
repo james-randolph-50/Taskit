@@ -1,4 +1,7 @@
 <h2><%= @project.name %></h2>
+<% if claimed_project? %>
+<p>Claimed</p>
+<% end %>
 
 <%= form_for @task do |f| %>
 <%= f.hidden_field :user_id, value: current_user.id %>
