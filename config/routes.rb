@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   devise_for :users 
   resources :users, only: [:show]
   resources :teams
+
+  post 'tasks/:id' => 'tasks#complete'
  
 end

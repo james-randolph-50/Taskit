@@ -3,5 +3,6 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(param[:id])
+        @taask = Task.new
     end
 end
