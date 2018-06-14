@@ -9,7 +9,12 @@ class ProjectsController < ApplicationController
         redirect_to team_path(current_team)
     end
 
+    def show
+        @project = Project.find(params[:id])
+    end
+
     def edit
+        @project = project.find(params[:id])
     end
 
     private
