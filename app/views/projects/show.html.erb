@@ -1,5 +1,5 @@
 <h2><%= @project.name %></h2>
-<% if claimed_project? %>
+<% if claimed_project?(@project) %>
 <p>Claimed</p>
 <% end %>
 
