@@ -12,7 +12,13 @@ class TeamsController < ApplicationController
     end
 
     def show
-        @team = current_user.team
+       # @team = current_user.team
+    end
+
+    def users_index
+        @team = Team.find(params[:id])
+        @users = @team.users
+        render template: 'users/index'
     end
 
     private
