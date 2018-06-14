@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180614013701) do
     t.integer "user_id"
     t.integer "project_id"
     t.datetime "due_date"
+    t.datetime "completion_date"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

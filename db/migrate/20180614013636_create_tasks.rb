@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.integer :project_id
       t.datetime :due_date
+      t.datetime :completion_date
       t.text :notes
 
       t.timestamps
