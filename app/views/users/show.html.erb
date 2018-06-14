@@ -1,5 +1,1 @@
-<h1>Projects for <%= @user.name %></h1>
-
-<% @user.pending_tasks.each do |task| %>
-<%= task.project.name %> 
-<% end %>
+<%= render partial: 'pending', locals: {user: @user}%>

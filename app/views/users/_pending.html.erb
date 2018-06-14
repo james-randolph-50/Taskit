@@ -1,0 +1,9 @@
+<h2>Projects for <%= user.name %></h2>
+
+<% if user.tasks.count > 0 %>
+    <% user.pending_tasks.each do |task| %>
+    <% task.project.name %>
+    <% end %>
+<% else %>
+    <p>You have no projects</p>
+<% end %>
