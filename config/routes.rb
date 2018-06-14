@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :tasks
   root 'static#index', as: 'root'
-  devise_for :users #, controllers: {
-    #sessions: 'users/sessions'
- # }
+  devise_for :users 
+  resources :users, only: [:show]
   resources :teams
-  #root to: "home#index"
+ 
 end

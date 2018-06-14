@@ -2,8 +2,12 @@
 <% if claimed_project?(@project) %>
 <p>Claimed</p>
 <% end %>
+<% if user_has_task?(@project) %>
+<p>by you.</p>
+<% else %>
 
 <%= form_for @task do |f| %>
 <%= f.hidden_field :user_id, value: current_user.id %>
 <%= f.submit "Enroll in Project" %>
+<% end %>
 <% end %>
