@@ -8,4 +8,16 @@
     <%= f.label :password_confirmation, "Confirm Password" %>
     <%= f.text_field :password_confirmation %> <br><br>
 
-    
+    <%= fields_for :users, @team.users.build do |user| %>
+        <%= user.label :name, "Your Name" %>
+        <%= user.email_field :name %> <br>
+
+        <%= user.label :email, "Your Email" %>
+        <%= user.email_field :email %> <br>
+
+        <%= user.label :password, "Your Password" %>
+        <%= user.email_field :password %> <br>
+
+        <%= user.label :password_confirmation, "Confirm Password" %>
+        <%= user.email_field :password_confirmation %>
+    <% end %>
