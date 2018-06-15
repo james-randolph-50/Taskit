@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'omniauth', '~> 1.8', '>= 1.8.1'
 
 
 # Use Capistrano for deployment
