@@ -7,7 +7,11 @@ class TeamsController < ApplicationController
     end
 
     def create
-        @team = Team.create(team_params)
+        @team = Team.new(team_params)
+        if @team.save
+            user = @team.users.build
+            user.update(user_params)
+        sign_in(user)
         redirect_to team_path(@team)
     end
 
@@ -24,6 +28,11 @@ class TeamsController < ApplicationController
     private
 
     def team_params
-        params.require(:team).permit(:name, :password, :password_confirmation, :users[:name, :password, :password_confirmation])
+        params.require(:team).permit(:name, :password, :password_confirmation)
     end
+
+    def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
 end
