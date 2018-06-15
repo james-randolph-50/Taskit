@@ -33,6 +33,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'omniauth', '~> 1.8', '>= 1.8.1'
 gem 'omniauth-facebook'
+gem 'dotenv-rails', '~> 2.4'
 
 
 # Use Capistrano for deployment
