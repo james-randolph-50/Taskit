@@ -1,5 +1,7 @@
 <h1>Show view for Teams</h1>
 <p>Hello, <%= current_user.name %>! You're on the <%= current_team.name %> team!</p>
+<div class="project"><%= link_to "New Project", new_project_path(current_team) %></div>
+
 
 <% current_team.projects.each do |project| %>
 <div class="project"><%= link_to project.name, project_path(project) %></div>

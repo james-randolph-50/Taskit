@@ -1,6 +1,16 @@
 <h2>Sign up for New Team</h2>
 
 <%= form_for @team do |f| %>
+
+<% if @team.errors.any? %>
+        <ul>
+            <% @team.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+
     <%= f.label :name, "Team Name" %>
     <%= f.text_field :name %><br><br>
 
