@@ -1,12 +1,16 @@
 class ProjectsController < ApplicationController
 
     def new
-        @project = current_team.projects.build
+        @project = Project.new
     end
 
     def create
-        @project = Project.create(project_params)
-        redirect_to team_path(current_team)
+        @project = Team.find(params[:id]).project.build(project_params)
+        if @project.save
+            redirect_to team_path(current_team)
+        else
+            render template: 'projects/new'
+        end
     end
 
     def show

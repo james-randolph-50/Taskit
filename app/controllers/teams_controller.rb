@@ -11,8 +11,11 @@ class TeamsController < ApplicationController
         if @team.save
             user = @team.users.build
             user.update(user_params)
-        sign_in(user)
-        redirect_to team_path(@team)
+            sign_in(user)
+            redirect_to team_path(@team)
+        else
+            render :new
+        end
     end
 
     def show
