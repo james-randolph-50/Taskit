@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   root 'static#index', as: 'root'
 
+  get '/auth/twitter/callback' => 'sessions#create'
+
+
   resources :tasks
   resources :projects, except: [:new, :create]
  
