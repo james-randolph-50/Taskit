@@ -34,6 +34,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'omniauth', '~> 1.8', '>= 1.8.1'
 gem 'omniauth-facebook'
 gem 'dotenv-rails', '~> 2.4'
+gem 'omniauth-twitter', '~> 1.4'
 
 
 # Use Capistrano for deployment
