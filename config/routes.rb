@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
   devise_for :users, path: '', path_names: { sign_up: 'users/sign_up'}
 
   get 'teams/sign_up' => 'teams#new', as: 'new_team'
