@@ -1,11 +1,11 @@
 <h2><%= @project.name %></h2>
-<%= Claimed if @project.claimed_project? %>
-<% if user_has_task?(@project) %>
-<p>by you.</p>
-<% else %>
-
-<%= form_for @task do |f| %>
-<%= f.hidden_field :user_id, value: current_user.id %>
-<%= f.submit "Enroll in Project" %>
+    <% if @project.claimed_project? %>
+        <% if user_has_task?(@project) %>
+        <p>This is your project.</p>
+    <% else %>
+        <%= form_for @task do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit "Enroll in Project" %>
+    <% end %>
 <% end %>
 <% end %>

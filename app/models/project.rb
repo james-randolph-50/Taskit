@@ -4,7 +4,7 @@ class Project < ApplicationRecord
 
     validates :name, presence: true
 
-    def claimed_project?(project)
+    def claimed_project?
         project.tasks.any?{|task| task.completion_status == 'pending' && task.id}
     end
 end
