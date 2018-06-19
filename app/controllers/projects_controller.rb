@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        @project = Team.find(params[:id]).project.build(project_params)
+        @project = Team.find(params[:id]).projects.build(project_params)
         if @project.save
             redirect_to team_path(current_team)
         else
