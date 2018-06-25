@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
 
-    before_action :authenticate_user!, only: [:show]
+    before_action :authenticate_user!, only: [:show, :users_index]
 
     def new
         @team = Team.new
