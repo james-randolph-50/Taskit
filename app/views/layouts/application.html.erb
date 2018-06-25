@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <h1>Taskit</h1>
+      <a href="/"><h1>Taskit</h1></a>
       <nav>
         <% if signed_in? %>
         <%= link_to "My Page", user_path(current_user)%> |
@@ -20,7 +20,9 @@
         <p>Get to Work! | </p>
         <%= link_to "Sign up on a New Team", new_team_path %> |
         <%= link_to "Join an Existing Team", new_user_registration_path %> |
-        <%= link_to "Sign In", new_user_session_path %>
+        <%= link_to "Sign In", new_user_session_path %> |
+        <%= link_to 'Sign in with Twitter', '/auth/twitter/' %> | 
+
         <% end %>
        </nav>
       </header>
