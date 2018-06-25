@@ -18,6 +18,11 @@ class TasksController < ApplicationController
         redirect_to :back
     end
 
+    def last_completed
+        @task = Task.last_completed
+    end
+    
+
     private
 
     def task_params

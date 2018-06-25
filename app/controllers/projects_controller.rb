@@ -34,8 +34,6 @@ class ProjectsController < ApplicationController
         redirect_to '/'
     end
 
-
-
     private
 
     def project_params

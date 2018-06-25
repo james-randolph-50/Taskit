@@ -29,10 +29,15 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-nav, main {
+nav, main, footer {
     max-width: 80%;
     margin: auto;
     background: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    padding: 20px 0;
+    font-size: 70%;
 }
 
 a:hover {

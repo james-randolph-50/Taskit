@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :verify_team
+    before_action :authenticate_user!, :verify_team
 
     def show
         @user = User.find(params[:id])

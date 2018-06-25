@@ -7,9 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_team
-    if User.find(current_user.id).team != Team.find(params[:id])
-      redirect_to user_path(current_user), notice: "That's not your team."
-    end
+    User.find(params[:id]).team == current_team
   end
 
  # def require_login
