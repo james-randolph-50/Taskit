@@ -19,7 +19,8 @@ class TeamsController < ApplicationController
     end
 
     def show
-       # @team = current_user.team
+       @user = current_user
+       @team = Team.find(params[:id])
     end
 
     def users_index
