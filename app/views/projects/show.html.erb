@@ -3,9 +3,7 @@
         <% if user_has_task?(@project) %>
         <p>This is your project.</p>
     <% else %>
-        <%= form_for @task do |f| %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit "Enroll in Project" %>
+        <%= form_for @task  %>
     <% end %>
 <% end %>
 <% end %>

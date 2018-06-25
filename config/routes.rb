@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'teams/sign_up' => 'teams#new', as: 'new_team'
   get 'teams/:id/users' => 'teams#users_index'
+  get 'teams/:id/users/"user_id/complete' => 'users#show_complete', as: 'user_complete'
 
   get 'teams/:id/projects/new' => 'projects#new', as: 'new_project'
   post 'teams/:id/projects' => 'projects#create', as: 'projects'
