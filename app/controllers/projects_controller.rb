@@ -19,8 +19,22 @@ class ProjectsController < ApplicationController
     end
 
     def edit
-        @project = project_url.find(params[:id]) #project_url or issue with .find? 
+        @project = Project.find(params[:id])
     end
+
+    def update
+        @project = Project.find(params[:id])
+        @project.update(project_params)
+        redirect_to project_path(@project)
+    end
+
+    def destroy
+        @project = Project.find(params[:id])
+        @project.destroy
+        redirect_to '/'
+    end
+
+
 
     private
 

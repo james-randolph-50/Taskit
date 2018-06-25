@@ -6,10 +6,11 @@
         <%= form_for @task do |f| %>
         <%= f.hidden_field :project_id, value: @project.id %>
         <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.text_area :notes %>
         <%= f.submit "Add Task" %>
     <% end %>
     <% end %>
 <% end %>
 
-<%= link_to "Edit Project", edit_project_path(@project) %> <%= link_to "Delete Project", project_path(@project), method: :delete %>
+<%= link_to "Edit Project", edit_project_path(@project) %> | <%= link_to "Delete Project", project_path(@project), method: :delete %>
 
