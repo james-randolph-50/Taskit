@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
     end
 
     def edit
-        @project = project.find(params[:id])
+        @project = project_url.find(params[:id]) #project_url or issue with .find? 
     end
 
     private
