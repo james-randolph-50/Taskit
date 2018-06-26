@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_team
-    User.find(params[:id]).team == current_team
+    User.find(params[:id]) == Team.find(params[:id])
   end
 
  # def require_login

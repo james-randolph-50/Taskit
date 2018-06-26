@@ -14,7 +14,7 @@
       <nav>
         <% if signed_in? %>
         <%= link_to "My Page", user_path(current_user)%> |
-        <%= link_to "Team", team_path(current_team) %> |
+        <%= link_to "My Team", team_path(current_team) %> |
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% else %>
         <p>Get to Work! | </p>
@@ -34,7 +34,7 @@
     <%= yield %>
     </main>
     <footer>
-      Taskit | Project Management Made Easy
+      Taskit | by James Randolph
     </footer>
   </body>
 </html>
