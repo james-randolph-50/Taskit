@@ -11,14 +11,14 @@ class TasksController < ApplicationController
     def update
         t = Task.find(params[:id])
         if t.user == current_user
-            t.update(completion_status: 'complete', completion_date: DateTime.now)
+            t.update(completion_status: 'complete', completion_date: DateTime.now, completed: true)
             t.project.update(last_completed: DateTime.now)
         end
         redirect_to :back
     end
 
-    def last_completed
-        @task = Task.last_completed
+    def completed
+        @task = Task.completed
     end
 
 

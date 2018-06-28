@@ -7,13 +7,15 @@
     <% end %>
 
     <% if @project.tasks.size > 0 %>
-    <table>
+    <table class="table">
         <tr>
             <th>Task</th>
         </tr>
         <% @project.tasks.each do |task| %>
         <tr>
         <td><%= task.notes %></td>
+        <td><% if !task.completed %>Mark complete</td>
+        <% end %>
         <% end %>
         <% end %>
         </table>

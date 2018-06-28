@@ -4,7 +4,9 @@ class Task < ApplicationRecord
 
     validates :notes, presence: true
 
-    def self.last_completed
-        where(completed: true)
+    scope :completed, -> { where(completed: true) }
+
+    def self.completed
+        Task.completed
     end
 end
