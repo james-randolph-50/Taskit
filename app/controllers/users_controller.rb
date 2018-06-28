@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show_complete
-        @user = User.find(params[:user_id])
-        @team = Team.find(params[:id])
+        @user = User.find(params[:id])
+        @team = Team.find(params[:team_id])
     end
 end
