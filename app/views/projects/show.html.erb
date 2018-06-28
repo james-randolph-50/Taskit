@@ -14,7 +14,7 @@
         <% @project.tasks.each do |task| %>
         <tr>
         <td><%= task.notes %></td>
-        <td><% if !task.completed %>Mark complete</td>
+        <td><% if !task.completed %><%= link_to "Mark Complete", task_path(@task), method: :update %></td>
         <% end %>
         <% end %>
         <% end %>
