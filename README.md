@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Taskit
 
-Things you may want to cover:
+A Rails app for project management.
 
-* Ruby version
+Taskit provides a CRUD interface for teams to list projects and tasks for those projects.
 
-* System dependencies
+Installation
 
-* Configuration
+Use Ruby 2.3.3 & Rails 5.1.6. To work on this app, fork and clone this repo, then run bundle install and rake db:migrate.
 
-* Database creation
+As usual, run rails s to fire up a loca server.
 
-* Database initialization
+Contributions are welcome via pull requests and issues.
 
-* How to run the test suite
+License:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Taskit is released under the MIT license.
