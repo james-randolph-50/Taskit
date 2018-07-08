@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users, path: '', path_names: { sign_up: 'users/sign_up'}
 
+  get 'tasks/:id/completed' => 'tasks#completed'
+
   get 'teams/sign_up' => 'teams#new', as: 'new_team'
   get 'teams/:id/users' => 'teams#users_index'
   get 'teams/:team_id/users/:id/complete' => 'users#show_complete', as: 'user_complete'

@@ -18,7 +18,9 @@ class TasksController < ApplicationController
     end
 
     def completed
-        @task = Task.completed
+        @task = Task.find(params[:id])
+        @task.completed = true
+        @task.save
     end
 
 
