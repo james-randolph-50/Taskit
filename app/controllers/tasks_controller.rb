@@ -21,6 +21,7 @@ class TasksController < ApplicationController
         @task = Task.find(params[:id])
         @task.completed = true
         @task.save
+        redirect_to project_path(@project)
     end
 
 

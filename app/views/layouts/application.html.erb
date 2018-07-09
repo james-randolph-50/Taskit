@@ -17,11 +17,11 @@
         <%= link_to "My Team", team_path(current_team) %> |
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% else %>
-        <p>Get Started! | </p>
+        <p>Get Started!  | </p>
         <%= link_to "Sign up on a New Team", new_team_path %> |
         <%= link_to "Join an Existing Team", new_user_registration_path %> |
         <%= link_to "Sign In", new_user_session_path %> |
-        <%= link_to 'Sign in with Twitter', '/auth/twitter/' %> | 
+        <%= link_to 'Sign in with Twitter', '/auth/twitter/' %>
 
         <% end %>
        </nav>
