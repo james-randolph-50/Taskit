@@ -23,5 +23,13 @@ Rails.application.routes.draw do
  
   resources :users, only: [:show]
   resources :teams, except: [:new]
+
+  resources :projects do 
+    resources :tasks, shallow: true do 
+      member do 
+        patch :completed
+      end
+    end
+  end
  
 end
