@@ -11,11 +11,11 @@ class User < ApplicationRecord
          has_many :projects, through: :tasks
 
          def completed_tasks
-          self.tasks.select {|task| task.completion_status == 'complete'}
+          self.tasks.select {|task| task.status == 'complete'}
          end
          
 
          def pending_tasks
-          self.tasks.select {|task| task.completion_status == 'pending'}
+          self.tasks.select {|task| task.status == 'incomplete'}
          end
 end

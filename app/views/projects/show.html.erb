@@ -15,14 +15,17 @@
       <tr>
         <td>
           <%= task.notes %>
+          <%= task.status %>
         </td>
         <td>
-          <% unless task.completed %>
-            <%= link_to "Mark Complete", completed_task_path(task), method: :patch %>
-          <% end %>
+        <% if !task.id.nil? %>
+         
+            <%= link_to "Change Status", toggle_status_task_path(task) %>
+        <% end %>
         </td>
       </tr>
     <% end %>
+
   </table>
 <% end %>
 

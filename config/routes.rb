@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users, path: '', path_names: { sign_up: 'users/sign_up'}
 
-  get 'tasks/:id/completed' => 'tasks#completed'
 
   get 'teams/sign_up' => 'teams#new', as: 'new_team'
   get 'teams/:id/users' => 'teams#users_index'
@@ -17,19 +16,15 @@ Rails.application.routes.draw do
 
   get '/auth/twitter/callback' => 'sessions#create'
 
+ resources :tasks do 
+  member do
+    get :toggle_status
+  end
+end
 
-  resources :tasks
-  resources :projects, except: [:new, :create]
- 
+  resources :projects
   resources :users, only: [:show]
   resources :teams, except: [:new]
 
-  resources :projects do 
-    resources :tasks, shallow: true do 
-      member do 
-        patch :completed
-      end
-    end
-  end
  
 end

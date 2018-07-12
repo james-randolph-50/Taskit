@@ -17,9 +17,15 @@ class TasksController < ApplicationController
         redirect_to :back
     end
 
-    def completed
+    def toggle_status
         @task = Task.find(params[:id])
-        @task.update(completed: true)
+       
+        if @task.incomplete?
+            @task.complete!
+        elsif @task.complete?
+            @task.incomplete!
+        end
+       
         redirect_to @task.project
       end
 
