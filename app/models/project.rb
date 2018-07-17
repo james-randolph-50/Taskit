@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
     belongs_to :team
+    has_many :users, through: :tasks
     has_many :tasks
 
     validates :name, presence: true

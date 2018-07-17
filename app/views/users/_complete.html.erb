@@ -1,7 +1,7 @@
-<h2>Projects completed by <%= user.name %> </h2>
+<h2>Tasks completed by <%= user.name %> </h2>
 
-<% if user.completed_tasks.count > 0 %>
-    <% user.completed_tasks.each do |task| %>
+<% if user.tasks.count > 0 %>
+    <% user.tasks.completed.each do |task| %>
         <%= link_to task.notes, project_path(task.project) %>
         <% end %>
     <% else %>

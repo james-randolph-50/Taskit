@@ -35,6 +35,20 @@ class ProjectsController < ApplicationController
         redirect_to '/'
     end
 
+    def tasks_index
+        @project = Project.find(params[:id])
+        @tasks = @project.tasks
+        render template: 'tasks/index'
+    end
+
+
+    def post
+        @project = Project.find(params[:id])
+        @task = Task,find(params[:task_id])
+        render template: 'tasks/show'
+    end
+    
+
     private
 
     def project_params

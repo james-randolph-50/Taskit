@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'teams/:id/users' => 'teams#users_index'
   get 'teams/:team_id/users/:id/complete' => 'users#show_complete', as: 'user_complete'
 
+  get 'projects/:id/tasks', to: 'projects#tasks_index'
+  get 'projects/:id/tasks/:id', to: 'projects#task'
+
   get 'teams/:id/projects/new' => 'projects#new', as: 'new_project'
   post 'teams/:id/projects' => 'projects#create', as: 'projects'
 
