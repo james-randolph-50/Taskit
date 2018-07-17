@@ -25,7 +25,9 @@ Rails.application.routes.draw do
   end
 end
 
-  resources :projects
+  resources :projects do
+    resources :tasks, except: [:index], controller: 'projects/tasks'
+  end
   resources :users, only: [:show]
   resources :teams, except: [:new]
 
