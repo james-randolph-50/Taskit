@@ -17,6 +17,11 @@ class TasksController < ApplicationController
         redirect_to :back
     end
 
+    def show
+        @user = current_user
+        @task = Task.find(params[:id])
+    end
+
     def toggle_status
         @task = Task.find(params[:id])
        
