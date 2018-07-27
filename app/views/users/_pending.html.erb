@@ -1,9 +1,4 @@
-<h2>Tasks completed by <%= user.name %> </h2>
+<h2><%= user.name %>'s Profile </h2>
 
-<% if user.tasks.count > 0 %>
-    <% user.tasks.completed.each do |task| %>
-        <%= link_to task.notes, project_path(task.project) %>
-        <% end %>
-    <% else %>
-        <p>No tasks completed</p>
-<% end %>
+<p>Email: <%= user.email %></p>
+<p>Created At: <%= user.created_at %></p>
