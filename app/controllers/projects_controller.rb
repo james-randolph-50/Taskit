@@ -47,6 +47,10 @@ class ProjectsController < ApplicationController
         @task = Task,find(params[:task_id])
         render template: 'tasks/show'
     end
+
+    def completed
+        render template: 'projects/completed'
+    end
     
 
     private

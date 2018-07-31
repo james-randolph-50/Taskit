@@ -8,4 +8,6 @@ class Project < ApplicationRecord
     def claimed_project?
         tasks.any?{|task| task.due_date && task.id}
     end
+
+
 end

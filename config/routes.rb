@@ -15,20 +15,19 @@ Rails.application.routes.draw do
   get 'projects/:id/tasks', to: 'projects#tasks_index'
   get 'projects/:id/tasks/:id', to: 'tasks#show'
 
+  get 'projects/completed', to: 'projects#completed'
 
 
   root 'static#index', as: 'root'
 
   get '/auth/twitter/callback' => 'sessions#create'
 
- #resources :tasks do 
-  #member do
-   # get :toggle_status
-  #end
-#end
 
   resources :projects do
     resources :tasks, except: [:index], controller: 'projects/tasks'
+    member do
+      get :toggle_status
+    end
   end
   
   resources :users, only: [:show]
