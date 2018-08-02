@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   
   get 'projects/:id/tasks', to: 'projects#tasks_index'
   get 'projects/:id/tasks/:id', to: 'tasks#show'
-
+  get 'projects/most', to: 'projects#show'
   get 'projects/completed', to: 'projects#completed'
 
 

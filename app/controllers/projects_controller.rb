@@ -14,7 +14,6 @@ class ProjectsController < ApplicationController
     end
 
     def show
-        
         @project = Project.find(params[:id])
         @task = @project.tasks.build
     end
@@ -48,8 +47,8 @@ class ProjectsController < ApplicationController
         render template: 'tasks/show'
     end
 
-    def completed
-        render template: 'projects/completed'
+    def most
+        render template: 'projects/most'
     end
     
 
