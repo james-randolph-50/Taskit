@@ -23,6 +23,11 @@
   </table>
 <% end %>
 
+<h4>Project with most Tasks:</h4>
+<%= Project.most.name %>
+
+<br><br>
+
 
 <%= link_to "Edit Project", edit_project_path(@project) %> | <%= link_to "Delete Project", project_path(@project), method: :delete %>
 
