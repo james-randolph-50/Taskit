@@ -40,18 +40,11 @@ class ProjectsController < ApplicationController
         render template: 'tasks/index'
     end
 
-
-    def post
-        @project = Project.find(params[:id])
-        @task = Task,find(params[:task_id])
-        render template: 'tasks/show'
-    end
-
-    def most
-        render template: 'projects/most'
+    def busiest
+        @project = Project.most
+        render template: 'projects/busiest'
     end
     
-
     private
 
     def project_params

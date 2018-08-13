@@ -14,8 +14,10 @@
     <% @project.tasks.each do |task| %>
       <tr>
         <td>
+          <% if task.notes %>
           <%= link_to task.notes, [@project, task] %>
           <%= task.status %>
+          <% end %>
         </td>
       </tr>
     <% end %>
