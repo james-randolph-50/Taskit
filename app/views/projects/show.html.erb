@@ -15,7 +15,7 @@
       <tr>
         <td>
           <% if task.notes %>
-          <%= link_to task.notes, [@project, task] %>
+          <%= link_to task.notes, [@project, task] :class => "task_notes" %>
           <%= task.status %>
           <% end %>
         </td>
