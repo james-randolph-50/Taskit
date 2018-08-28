@@ -8,3 +8,14 @@ $(function(){
         e.preventDefault();
     })
 })
+
+// Submit note via AJAX
+
+$(function(){
+    $("new_note").on("submit", function(e){
+
+        $.ajax({
+            type: "POST"
+        })
+    })
+})
