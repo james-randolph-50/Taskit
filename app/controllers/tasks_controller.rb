@@ -8,6 +8,11 @@ class TasksController < ApplicationController
         redirect_to project_path(t.project)
     end
 
+    def index
+        p = Project.find(params[:project_id])
+        
+    end
+
     def update
         t = Task.find(params[:id])
         if t.user == current_user

@@ -37,6 +37,7 @@ gem 'dotenv-rails', '~> 2.4'
 gem 'omniauth-twitter', '~> 1.4'
 
 gem 'pry'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 
 # Use Capistrano for deployment

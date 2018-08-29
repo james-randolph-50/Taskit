@@ -1,12 +1,10 @@
 $(function(){
     $("a.load_tasks").on("click", function(e){
-            alert("You clicked this link");
             e.preventDefault;
     $.get(this.href).success(function(response){
         $("div.tasks").html(response)
              })
 
-        e.preventDefault();
     })
 })
 
@@ -18,7 +16,7 @@ $(function(){
         $.ajax({
             type: "POST",
             url: this.action,
-            data: $(this).serialize();
+            data: $(this).serialize(),
             success: function(response){
                 $("#task_notes").val("");
                 var $ul = $("div.task ul")
