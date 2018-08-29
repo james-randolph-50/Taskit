@@ -1,8 +1,8 @@
 $(function(){
-    $("a.load_projects").on("click", function(e){
+    $("a.load_tasks").on("click", function(e){
 
     $.get(this.href).success(function(response){
-        $("div.projects").html(response)
+        $("div.tasks").html(response)
              })
 
         e.preventDefault();
@@ -12,15 +12,15 @@ $(function(){
 // Submit note via AJAX
 
 $(function(){
-    $("new_project").on("submit", function(e){
+    $("new_task").on("submit", function(e){
 
         $.ajax({
             type: "POST",
             url: this.action,
             data: $(this).serialize();
             success: function(response){
-                $("#project_name").val("");
-                var $ul = $("div.project ul")
+                $("#task_notes").val("");
+                var $ul = $("div.task ul")
                 $ul.append(response);
             }
         });

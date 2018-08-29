@@ -30,6 +30,13 @@
 
 <br><br>
 
+<h5>AJAX stuff</h5>
+<p> 
+<%= link_to "Load Tasks", project_tasks_path(@project), :class => "load_tasks" %>
+ </p>
+<br>
+<h6>End Ajax stuff</h6>
+
 
 
 <%= link_to "Edit Project", edit_project_path(@project) %> | <%= link_to "Delete Project", project_path(@project), method: :delete %>
