@@ -1,6 +1,7 @@
 $(function(){
     $("a.load_tasks").on("click", function(e){
-
+            alert("You clicked this link");
+            e.preventDefault;
     $.get(this.href).success(function(response){
         $("div.tasks").html(response)
              })
