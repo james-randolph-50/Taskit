@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users, path: '', path_names: { sign_up: 'users/sign_up'}
 
+  get 'projects/:id/tasks', to: 'projects#tasks'
 
   get 'teams/sign_up' => 'teams#new', as: 'new_team'
   get 'teams/:id/users/:user_id' => 'teams#users_index'

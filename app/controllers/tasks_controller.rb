@@ -13,7 +13,11 @@ class TasksController < ApplicationController
         p.tasks
         # line 13: render JSON, not a template. 
         # how respond from nested and non-nested routes
-        
+    end
+
+    def tasks
+        project = Project.find(params[:project_id])
+        render plain: project.tasks
     end
 
     def update
