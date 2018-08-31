@@ -1,2 +1,20 @@
 <h2>This is the Tasks Index page</h2>
 
+<% if @project.tasks.any? %>
+  <table class="table">
+    <tr>
+      <th>Task</th>
+    </tr>
+    <% @project.tasks.each do |task| %>
+      <tr>
+        <td>
+          <% if task.notes %>
+          <%= link_to task.notes, [@project, task] %>
+          <%= task.status %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+
+  </table>
+<% end %>
