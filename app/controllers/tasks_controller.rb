@@ -10,6 +10,9 @@ class TasksController < ApplicationController
 
     def index
         p = Project.find(params[:project_id])
+        p.tasks
+        # line 13: render JSON, not a template. 
+        # how respond from nested and non-nested routes
         
     end
 
