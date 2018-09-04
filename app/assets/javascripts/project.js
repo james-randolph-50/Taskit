@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
     $("a.load_tasks").on("click", function(e){
             e.preventDefault;
     $.get(this.href).success(function(response){
