@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
         @task = @project.tasks.build
         render json: @task.to_json
 
-        render 'projects/:id/tasks', :layout => false
+       # render '/projects/:id/tasks', :layout => false
     end
 
     def show
