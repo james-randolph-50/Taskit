@@ -2,8 +2,11 @@ $(document).ready(function(){
     $("a.load_tasks").on("click", function(e){
             e.preventDefault();
     $.get(this.href).success(function(response){
-       
-        $("div.tasks").html(response)
+       response.forEach(function(element) {
+        var html = `<h2>${element.notes}</h2> <p>${element.status}</p>`
+        $("div.tasks").append(html)
+       })
+        
              })
 
     })
