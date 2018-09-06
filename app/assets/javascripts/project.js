@@ -1,7 +1,8 @@
 $(document).ready(function(){
     $("a.load_tasks").on("click", function(e){
-            e.preventDefault;
+            e.preventDefault();
     $.get(this.href).success(function(response){
+       
         $("div.tasks").html(response)
              })
 

@@ -14,9 +14,9 @@ class ProjectsController < ApplicationController
     end
 
     def tasks
-        @project = Project.find(params[:id])
-        @task = @project.tasks.build
-        render json: @task.to_json
+        project = Project.find(params[:id])
+        t = project.tasks
+        render json: t 
 
        # render '/projects/:id/tasks', :layout => false
     end
