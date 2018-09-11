@@ -13,13 +13,13 @@ class ProjectsController < ApplicationController
         end
     end
 
-    def tasks
-        project = Project.find(params[:id])
-        t = project.tasks
-        render json: t 
+   # def tasks
+    #    project = Project.find(params[:id])
+      #  t = project.tasks
+       # render json: t 
 
        # render '/projects/:id/tasks', :layout => false
-    end
+    #end
 
     def show
         @project = Project.find(params[:id])
