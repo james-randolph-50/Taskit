@@ -13,13 +13,14 @@ class ProjectsController < ApplicationController
         end
     end
 
-   # def tasks
-    #    project = Project.find(params[:id])
-      #  t = project.tasks
-       # render json: t 
+    def tasks
+        
+        project = Project.find(params[:id])
+        t = project.tasks
+        render json: t 
 
-       # render '/projects/:id/tasks', :layout => false
-    #end
+        render '/projects/:id/tasks', :layout => false
+    end
 
     def show
         @project = Project.find(params[:id])
@@ -43,6 +44,7 @@ class ProjectsController < ApplicationController
     end
 
     def tasks_index
+        binding.pry
         @project = Project.find(params[:id])
         @tasks = @project.tasks
         render template: 'tasks/index'

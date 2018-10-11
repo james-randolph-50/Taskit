@@ -16,6 +16,7 @@ class TasksController < ApplicationController
     end
 
     def tasks
+        
         project = Project.find(params[:project_id])
         render json: project.to_json
     end
