@@ -129,6 +129,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     orm_adapter (0.5.0)
+    pg (1.1.3-x86-mingw32)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -230,6 +231,7 @@ DEPENDENCIES
   omniauth (~> 1.8, >= 1.8.1)
   omniauth-facebook
   omniauth-twitter (~> 1.4)
+  pg
   pry
   puma (~> 3.7)
   rails (~> 5.1.6)
